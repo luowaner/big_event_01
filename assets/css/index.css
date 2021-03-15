@@ -1,0 +1,66 @@
+.layui-footer {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* 字体图标调整位置 */
+.iconfont {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.layui-icon {
+    margin-left: 20px;
+    margin-right: 8px;
+}
+
+/* 去掉超出的滚动条 */
+.layui-body {
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* 低版本浏览器兼容 去除a过渡效果 */
+a {
+    transition: none !important;
+}
+
+/*左侧头像 */
+.userinfo {
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+    user-select: none;
+    text-align: center;
+
+}
+
+.layui-side-scroll .userinfo {
+    border-bottom: 1px solid #000;
+
+}
+
+.layui-nav-img {
+    width: 40px;
+    height: 40px;
+}
+
+.text-avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #009688;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+    vertical-align: middle;
+    margin-right: 10px;
+
+}

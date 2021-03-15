@@ -12,4 +12,25 @@ $.ajaxPrefilter(function (options) {
     console.log(options);
     // 手动为url添加前缀 
     options.url = baseURL + options.url;
+
+    // 需求2:包含/my/的都手动添加头信息
+    if (options.url.indexOf('/my/') !== -1) {
+        options.headers = {
+            // 在登录跳转时保存了token
+            Authorization: localStorage.getItem('token') || ''
+        }
+    }
+
+    // 登陆拦截
+    options.complete = function (res) {
+
+        console.log(res);
+        if (res.responseJSON.status == 1 && res.responseJSON.message == '身份认证失败！') {
+            // 销毁token
+            localStorage.removeItem('token');
+            // 页面跳转
+            location.href = '/login.html'
+        }
+    }
+
 })
