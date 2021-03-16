@@ -30,7 +30,7 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem('token') || ''
         // },
         success: (res) => {
-            console.log(res);
+            // console.log(res);
             // 0 = 成功
             if (res.status != 0) {
                 return layui.layer.msg(res.message)
@@ -54,7 +54,7 @@ function getUserInfo() {
 
 // 封装函数:渲染用户头像包含字母头像或用户自己上传的头像
 function renderAvatar(user) {
-    console.log(user);
+    // console.log(user);
     // 渲染名称,如果没有就用username
     let name = user.nickname || user.username;
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name);
